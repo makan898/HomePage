@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>2020/05/29</title>
+    <link href="/2020/05/29/stringJoint/"/>
+    <url>/2020/05/29/stringJoint/</url>
+    
+    <content type="html"><![CDATA[<p>static メソッド stringJoint( )は 2 つ文字列を受け取って、前後にある空白を除去して<br>からそれらの文字列を連結する。</p><h2 id="Java-Code"><a href="#Java-Code" class="headerlink" title="Java Code"></a>Java Code</h2><pre><code class="bash">class StringContest{    public static void main(String args[]){        String s1,s2;        s1=&quot; abcde &quot;;        s2=&quot; 12345 &quot;;    System.out.println(stringJoint(s1,s2));}static String stringJoint(String s1, String s2){    return  s1.trim()+s2.trim();     }}</code></pre>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>stringJoint( )</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/2020/05/24/hello-world/"/>
     <url>/2020/05/24/hello-world/</url>
