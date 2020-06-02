@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>1</title>
+    <link href="/2020/06/02/1/"/>
+    <url>/2020/06/02/1/</url>
+    
+    <content type="html"><![CDATA[<p>/* swap関数は、分割コンパイルするバージョン <em>/<br>/</em> bcc32 -c 0202.c<br>   bcc32 -e0202 0202.obj swap.obj */</p><p>#include “swap.h”<br>#define N 10</p><p>/* 大域変数 <em>/<br>int a[N];<br>void print_array(int left, int right);<br>int partition(int left, int right);<br>void quick_sort(int left, int right);<br>void print_array(int from, int to) { /</em> from番目から to番目までの要素をプリント */<br>   int i;</p><p>   for (i = from ; i &lt;= to; i ++)<br>     printf(“%3d “, a[i]);</p><p>   printf(“\n\n”);</p><p>}</p><p>int main(void){<br>    int i;<br>    for(i = 0;i&lt;N;i++){<br>    printf(“a[%d]を入力してください：”,i);<br>    scanf(“%d”,&amp;a[i]);<br>    }<br>   /* 配列a ソート前。表示 */<br>   printf (“BEFORE :”);<br>   print_array(0, N-1);</p><p>   quick_sort(0, N-1); /* クイックソート! */</p><p>   /* 配列a ソート後。表示 */<br>   printf (“ AFTER :”);<br>   print_array(0, N-1);</p><p>   return(0);<br>}</p><p>void quick_sort(int left, int right) {</p><p>   /*　疑似コードを参考に自作しよう。コードは簡単。納得までねばろう */<br>    int j;<br>    if(left &lt; right){<br>        j = partition(left,right);<br>        quick_sort(left,j - 1);<br>        quick_sort(j + 1,right);<br>    }</p><p>}</p><p>/* 以下はSTEP2.1 この関数がクイックソートの根幹部です。 */<br>int partition(int left, int right){<br>   int i, j, pivot;</p><p>   pivot = a[left]; /* pivotは、最左 <em>/<br>   i = left+1; /</em> 左から右へ動くポインター <em>/<br>   j = right;  /</em> 右から左へ動くポインター */</p><p>   /* 疑似コードを参考に作成しなさい */<br>    while(i &lt;= j){<br>        while(i &lt;= right &amp;&amp; a[i] &lt; pivot){<br>            i++;<br>        }<br>        while(a[j] &gt; pivot){<br>            j–;<br>        }<br>        if(i &lt;= j){<br>            swap(&amp;a[i],&amp;a[j]);<br>            i++;<br>            j–;<br>        }<br>    }<br>    swap(&amp;a[left],&amp;a[j]);<br>        return(j);<br>}</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Javaコンテスト１</title>
     <link href="/2020/05/29/stringJoint/"/>
     <url>/2020/05/29/stringJoint/</url>
