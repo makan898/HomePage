@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>コンテスト</title>
+    <link href="/2020/07/11/contest/"/>
+    <url>/2020/07/11/contest/</url>
+    
+    <content type="html"><![CDATA[<h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><pre><code class="bash">import java.util.Scanner;public class Anonymous_1 {    public static void main(String[] args) {        Scanner in=new Scanner(System.in);        String s=in.next();        int sum=0;        int j=1;        for(int i=0;i&lt;s.length();i++)        {            if(s.charAt(i)!=&#39;-&#39;)            {                sum+=(s.charAt(i)-&#39;0&#39;);                j++;                if(j==10)                {                    break;                }            }        }        int mod=sum%11;        if(mod==10)        {            if(s.charAt(s.length()-1)==&#39;X&#39;)            {                System.out.println(&quot;Right&quot;);            }            else            {                System.out.println((s.substring(0, s.length()-1)+&#39;X&#39;));            }        }        else if(mod==s.charAt(s.length()-1)-&#39;0&#39;)        {            System.out.println(s+ &quot;&quot; + &quot;is correct&quot;);        }        else        {            System.out.println(s+ &quot;&quot; + &quot;is Wrong&quot;);        }    }}</code></pre><h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><pre><code class="bash">public class Anonymous{    static double temp,temp1,c,t4,t3,t2,t1;/*開始座標（LineStart_x LineStart_y）終了座標（LineEnd_x LineEnd_y）右上座標（RectLeft_x RectTop_y）左下座標（RectRight_x, RectBottom_y）*///重なるか否かを判定する    public static boolean isLineIntersectRectangle(        double LineStart_x,        double LineStart_y,        double LineEnd_x,        double LineEnd_y,        double RectLeft_x,        double RectTop_y,        double RectRight_x,        double RectBottom_y) {        double lineHeight = LineStart_y - LineEnd_y;        double lineWidth = LineEnd_x - LineStart_x;          t1 = lineHeight * RectLeft_x + lineWidth * RectTop_y;        t2 = lineHeight * RectRight_x + lineWidth * RectBottom_y;        t3 = lineHeight * RectLeft_x + lineWidth * RectBottom_y;        t4 = lineHeight * RectRight_x + lineWidth * RectTop_y;        c = LineStart_x * LineEnd_y - LineEnd_x * LineStart_y;        if ((t1 + c &gt;= 0 &amp;&amp; t2 + c &lt;= 0)                || (t1 + c &lt;= 0 &amp;&amp; t2 + c &gt;= 0)                || (t3 + c &gt;= 0 &amp;&amp; t4 + c &lt;= 0)                || (t3 + c &lt;= 0 &amp;&amp; t4 + c &gt;= 0)) {            if (RectLeft_x &gt; RectRight_x) {                temp = RectLeft_x;                RectLeft_x = RectRight_x;                RectRight_x = temp;            }            if (RectTop_y &lt; RectBottom_y) {                temp1 = RectTop_y;                RectTop_y = RectBottom_y;                RectBottom_y = temp1;            }            if ((LineStart_x &lt; RectLeft_x &amp;&amp; LineEnd_x &lt; RectLeft_x)                    || (LineStart_x &gt; RectRight_x &amp;&amp; LineEnd_x &gt; RectRight_x)                    || (LineStart_y &gt; RectTop_y &amp;&amp; LineEnd_y &gt; RectTop_y)                    || (LineStart_y &lt; RectBottom_y &amp;&amp; LineEnd_y &lt; RectBottom_y)) {                return false;            } else {                return true;            }        } else {            return false;        }    }    //main関数    public static void main(String[] args) {        double LineStart_x;        double LineStart_y;        double LineEnd_x;        double LineEnd_y;        double RectLeft_x;        double RectTop_y;        double RectRight_x;        double RectBottom_y;        //入力        LineStart_x = Double.parseDouble(args[0]);        LineStart_y = Double.parseDouble(args[1]);        LineEnd_x = Double.parseDouble(args[2]);        LineEnd_y = Double.parseDouble(args[3]);        RectLeft_x = Double.parseDouble(args[4]);        RectTop_y = Double.parseDouble(args[5]);        RectRight_x = Double.parseDouble(args[6]);        RectBottom_y = Double.parseDouble(args[7]);        //falseならprint F,trueならprint T        if(isLineIntersectRectangle(            LineStart_x,            LineStart_y,            LineEnd_x,            LineEnd_y,            RectLeft_x,            RectTop_y,            RectRight_x,            RectBottom_y) == false){                System.out.println(&quot;F&quot;);            }        else{            System.out.println(&quot;T&quot;);        }    }}</code></pre><h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><pre><code class="bash">public class Anonymous_3{//娭悢X*N両public static void fun(int n) {     double x,A;     x = Math.E/n;     A = 1;     for (int i=1;i&lt;=n;i++){         A =A * x * i;}System.out.println(&quot;n=&quot; + n + &quot; &quot;);System.out.println(&quot;Answer=&quot;+A);}public static void main (String[] args) {    fun(500);    fun(1000);}}</code></pre>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Java report 1</title>
     <link href="/2020/06/27/java%20report%201/"/>
     <url>/2020/06/27/java%20report%201/</url>
