@@ -8,7 +8,7 @@
     <link href="/2021/05/17/genjyou/"/>
     <url>/2021/05/17/genjyou/</url>
     
-    <content type="html"><![CDATA[<hr><h2 id="現状"><a href="#現状" class="headerlink" title="現状"></a>現状</h2><p>実行環境:Python 3.7</p><pre><code class="bash">pip install opencv-python</code></pre><hr><p>requirements.txtファイルを作成する</p><pre><code class="bash">tensorflow-gpu==1.15.0Keras==2.3.1Flaskcolorama </code></pre><hr><pre><code class="bash">conda install --yes --file requirements.txt</code></pre><pre><code class="bash">python main.py</code></pre><p><img src="/1.png" srcset="/img/loading.gif" alt=""></p><p>ライブラリのインストールができた</p><p>入力のWebカメラをカメラに変換する方法を検討中</p><hr>]]></content>
+    <content type="html"><![CDATA[<hr><h2 id="現状"><a href="#現状" class="headerlink" title="現状"></a>現状</h2><p>実行環境:Python 3.7</p><pre><code class="bash">pip install opencv-python</code></pre><hr><p>requirements.txtファイルを作成する</p><pre><code class="bash">tensorflow-gpu==1.15.0Keras==2.3.1Flaskcolorama </code></pre><pre><code class="bash">conda install --yes --file requirements.txt</code></pre><hr><pre><code class="bash">python main.py</code></pre><p><img src="/1.png" srcset="/img/loading.gif" alt=""></p><p>ライブラリのインストールができた</p><p>入力のWebカメラをカメラに変換する方法を検討中</p><hr>]]></content>
     
     
     
