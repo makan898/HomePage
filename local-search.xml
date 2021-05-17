@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>現状</title>
+    <link href="/2021/05/17/genjyou/"/>
+    <url>/2021/05/17/genjyou/</url>
+    
+    <content type="html"><![CDATA[<hr><h2 id="現状"><a href="#現状" class="headerlink" title="現状"></a>現状</h2><p>実行環境:Python 3.7</p><pre><code class="bash">pip install opencv-python</code></pre><pre><code class="bash">conda install --yes --file requirements.txt</code></pre><hr>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>システム製作A</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>コンテスト</title>
     <link href="/2020/07/11/contest/"/>
     <url>/2020/07/11/contest/</url>
